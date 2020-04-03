@@ -17,6 +17,7 @@ defmodule Scrape.WorkerTest do
 
   test "handle_info/2 returns with a timeout 3600 seconds" do
     assert [] == Repo.all(Emission)
+    insert(:emission, timestamp: Timex.to_datetime({{2020, 4, 2}, {0, 0, 0}}))
 
     use_cassette "get_emission_data" do
       assert {:noreply, %{}, 3600_000} == Worker.handle_info(:timeout, %{})

@@ -6,3 +6,6 @@ config :scrape, Scrape.Repo,
   password: "postgres",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :scrape,
+  disable_worker: true
