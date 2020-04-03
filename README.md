@@ -2,6 +2,7 @@
 
 Scrapes data from [NationalGrid](https://carbon-intensity.github.io/api-definitions/#get-intensity-from-to)
 
+The service polls data for previous day and store it in Postgres
 
 ## Compile
 
